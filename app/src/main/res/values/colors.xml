@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bottom_nav">#5454A8</color>
+    <color name="poly_yellow">#FFEB3B</color>
+    <color name="poly_green">#4CAF50</color>
+    <color name="poly_green_light">#5ACD5E</color>
+    <color name="about_txt_title">#4CAF50</color>
+    <color name="about_txt">#4CAF50</color>
+    <color name="btn_bg">#1BAC21</color>
+</resources>
