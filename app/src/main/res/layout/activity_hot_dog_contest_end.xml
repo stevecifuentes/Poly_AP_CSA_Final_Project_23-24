@@ -13,7 +13,7 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline20"
             app:layout_constraintStart_toStartOf="@+id/guideline18"
             app:layout_constraintTop_toTopOf="@+id/guideline24"
-            tools:srcCompat="@drawable/im_hot_dog" />
+            tools:srcCompat="@drawable/im_hotdog_0" />
 
         <ImageView
             android:id="@+id/im_hd2"
@@ -23,7 +23,7 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline21"
             app:layout_constraintStart_toStartOf="@+id/guideline20"
             app:layout_constraintTop_toTopOf="@+id/guideline24"
-            tools:srcCompat="@drawable/im_hot_dog" />
+            tools:srcCompat="@drawable/im_hotdog_0" />
 
         <ImageView
             android:id="@+id/im_hd3"
@@ -33,7 +33,7 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline22"
             app:layout_constraintStart_toStartOf="@+id/guideline21"
             app:layout_constraintTop_toTopOf="@+id/guideline24"
-            tools:srcCompat="@drawable/im_hot_dog" />
+            tools:srcCompat="@drawable/im_hotdog_0" />
 
         <ImageView
             android:id="@+id/im_hd4"
@@ -43,7 +43,7 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline19"
             app:layout_constraintStart_toStartOf="@+id/guideline22"
             app:layout_constraintTop_toTopOf="@+id/guideline24"
-            tools:srcCompat="@drawable/im_hot_dog" />
+            tools:srcCompat="@drawable/im_hotdog_0" />
 
         <ImageView
             android:id="@+id/im_hd5"
@@ -53,7 +53,7 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline20"
             app:layout_constraintStart_toStartOf="@+id/guideline18"
             app:layout_constraintTop_toTopOf="@+id/guideline25"
-            tools:srcCompat="@drawable/im_hot_dog" />
+            tools:srcCompat="@drawable/im_hotdog_0" />
 
         <ImageView
             android:id="@+id/im_hd6"
@@ -63,7 +63,7 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline21"
             app:layout_constraintStart_toStartOf="@+id/guideline20"
             app:layout_constraintTop_toTopOf="@+id/guideline25"
-            tools:srcCompat="@drawable/im_hot_dog" />
+            tools:srcCompat="@drawable/im_hotdog_0" />
 
         <ImageView
             android:id="@+id/im_hd7"
@@ -73,7 +73,7 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline22"
             app:layout_constraintStart_toStartOf="@+id/guideline21"
             app:layout_constraintTop_toTopOf="@+id/guideline25"
-            tools:srcCompat="@drawable/im_hot_dog" />
+            tools:srcCompat="@drawable/im_hotdog_0" />
 
         <ImageView
             android:id="@+id/im_hd8"
@@ -83,7 +83,7 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline19"
             app:layout_constraintStart_toStartOf="@+id/guideline22"
             app:layout_constraintTop_toTopOf="@+id/guideline25"
-            tools:srcCompat="@drawable/im_hot_dog" />
+            tools:srcCompat="@drawable/im_hotdog_0" />
 
         <ImageView
             android:id="@+id/im_hd9"
@@ -93,7 +93,7 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline20"
             app:layout_constraintStart_toStartOf="@+id/guideline18"
             app:layout_constraintTop_toTopOf="@+id/guideline26"
-            tools:srcCompat="@drawable/im_hot_dog" />
+            tools:srcCompat="@drawable/im_hotdog_0" />
 
         <ImageView
             android:id="@+id/im_hd10"
@@ -103,7 +103,7 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline21"
             app:layout_constraintStart_toStartOf="@+id/guideline20"
             app:layout_constraintTop_toTopOf="@+id/guideline26"
-            tools:srcCompat="@drawable/im_hot_dog" />
+            tools:srcCompat="@drawable/im_hotdog_0" />
 
         <ImageView
             android:id="@+id/im_hd11"
@@ -113,7 +113,7 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline22"
             app:layout_constraintStart_toStartOf="@+id/guideline21"
             app:layout_constraintTop_toTopOf="@+id/guideline26"
-            tools:srcCompat="@drawable/im_hot_dog" />
+            tools:srcCompat="@drawable/im_hotdog_0" />
 
         <ImageView
             android:id="@+id/im_hd12"
@@ -123,7 +123,7 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline19"
             app:layout_constraintStart_toStartOf="@+id/guideline22"
             app:layout_constraintTop_toTopOf="@+id/guideline26"
-            tools:srcCompat="@drawable/im_hot_dog" />
+            tools:srcCompat="@drawable/im_hotdog_0" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline18"

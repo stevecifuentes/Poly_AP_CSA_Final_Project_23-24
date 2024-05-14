@@ -49,7 +49,7 @@ public class GameHotDogEatingContest extends AppCompatActivity {
         btnNext.setVisibility(View.INVISIBLE);
 
         ImageView ivMain = findViewById(R.id.iv_main);
-        ivMain.setImageResource(R.drawable.im_hot_dog_3);
+        ivMain.setImageResource(R.drawable.im_hotdog_3);
 
         etName.addTextChangedListener(new TextWatcher() {
             @Override
@@ -143,8 +143,7 @@ public class GameHotDogEatingContest extends AppCompatActivity {
     private void runContest()
     {
         displayStats();
-        if (player.getMouthDryness() < 10 && player.getCaloriesConsumed() < player.getMaxCaloriesConsumed())
-        {
+        if (player.getMouthDryness() < 10 && player.getCaloriesConsumed() < player.getMaxCaloriesConsumed()) {
             chooseOption();
         }
         else {
@@ -192,7 +191,7 @@ public class GameHotDogEatingContest extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 player.eatHotDog();
-                ivMain.setImageResource(R.drawable.im_hot_dog_2);
+                ivMain.setImageResource(R.drawable.im_hotdog_2);
                 runContest();
             }
         });
@@ -201,7 +200,7 @@ public class GameHotDogEatingContest extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 player.drinkSoda();
-                ivMain.setImageResource(R.drawable.im_soda_4);
+                ivMain.setImageResource(R.drawable.im_hotdog_soda_4);
                 runContest();
             }
         });
@@ -245,7 +244,7 @@ public class GameHotDogEatingContest extends AppCompatActivity {
         //turn off hot dogs
         for (ImageView img:ivHotDogs) {
             img.setVisibility(View.INVISIBLE);
-            img.setImageResource(R.drawable.im_hot_dog);
+            img.setImageResource(R.drawable.im_hotdog_0);
         }
         tvYouAte.setVisibility(View.INVISIBLE);
         tvHotDogs.setVisibility(View.INVISIBLE);

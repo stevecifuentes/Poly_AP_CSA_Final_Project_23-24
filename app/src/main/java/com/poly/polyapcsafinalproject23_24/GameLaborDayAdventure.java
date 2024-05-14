@@ -1,14 +1,11 @@
 package com.poly.polyapcsafinalproject23_24;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 public class GameLaborDayAdventure extends GameActivity {
 
@@ -43,7 +40,7 @@ public class GameLaborDayAdventure extends GameActivity {
     {
         isWon = false;
 
-        ivStory.setImageResource(R.drawable.im_title);
+        ivStory.setImageResource(R.drawable.im_laborday_title);
 
 
         tvOptionTitle.setText("HIGH SCHOOL EDITION");
@@ -94,7 +91,7 @@ public class GameLaborDayAdventure extends GameActivity {
     {
         tvStoryText.setText("What would you like to do at the beach?");
 
-        ivStory.setImageResource(R.drawable.im_beach);
+        ivStory.setImageResource(R.drawable.im_laborday_beach);
 
         setAllBtnsVisible();
         btn1.setText("Go Swimming");
@@ -123,7 +120,7 @@ public class GameLaborDayAdventure extends GameActivity {
 
         tvStoryText.setText("You see a shark, what do you do?");
 
-        ivStory.setImageResource(R.drawable.im_swimming);
+        ivStory.setImageResource(R.drawable.im_laborday_swimming);
 
         setAllBtnsVisible();
         btn1.setText("Call the lifeguard");
@@ -153,7 +150,7 @@ public class GameLaborDayAdventure extends GameActivity {
         isWon = true;
         tvStoryText.setText("The lifeguard saves you, you don't die, congrats.");
 
-        ivStory.setImageResource(R.drawable.im_lifeguard_shark);
+        ivStory.setImageResource(R.drawable.im_laborday_lifeguard_shark);
 
         setAllBtnsVisible();
         btn1.setText("Next");
@@ -175,7 +172,7 @@ public class GameLaborDayAdventure extends GameActivity {
 
         tvStoryText.setText("You punch the shark but injure you hand. You can't play football. Game over.");
 
-        ivStory.setImageResource(R.drawable.im_punch_shark);
+        ivStory.setImageResource(R.drawable.im_laborday_punch_shark);
 
         setAllBtnsVisible();
         btn1.setText("Next");
@@ -196,7 +193,7 @@ public class GameLaborDayAdventure extends GameActivity {
 
         tvStoryText.setText("For how long?");
 
-        ivStory.setImageResource(R.drawable.im_arrive_at_beach);
+        ivStory.setImageResource(R.drawable.im_laborday_arrive_at_beach);
 
         setAllBtnsVisible();
         btn1.setText("20 minutes");
@@ -225,7 +222,7 @@ public class GameLaborDayAdventure extends GameActivity {
         isWon = false;
         tvStoryText.setText("You are white. Might as well have stayed home. Game over.");
 
-        ivStory.setImageResource(R.drawable.im_tan20);
+        ivStory.setImageResource(R.drawable.im_laborday_tan20);
 
         setAllBtnsVisible();
         btn1.setText("Next");
@@ -246,7 +243,7 @@ public class GameLaborDayAdventure extends GameActivity {
         isWon = false;
         tvStoryText.setText("You are burned. Too much of a good thing is bad. Learn from this experience. Game over.");
 
-        ivStory.setImageResource(R.drawable.im_tan5hours);
+        ivStory.setImageResource(R.drawable.im_laborday_tan5hours);
 
         setAllBtnsVisible();
         btn1.setText("Next");
@@ -269,7 +266,7 @@ public class GameLaborDayAdventure extends GameActivity {
 
         tvStoryText.setText("What would you like to do at the park?");
 
-        ivStory.setImageResource(R.drawable.im_whaley_park);
+        ivStory.setImageResource(R.drawable.im_laborday_whaley_park);
 
         setAllBtnsVisible();
         btn1.setText("Go play soccer");
@@ -297,7 +294,7 @@ public class GameLaborDayAdventure extends GameActivity {
 
         tvStoryText.setText("You see a baby, what do you do?");
 
-        ivStory.setImageResource(R.drawable.im_soccer_baby);
+        ivStory.setImageResource(R.drawable.im_laborday_soccer_baby);
 
         setAllBtnsVisible();
         btn1.setText("Call the mom");
@@ -326,7 +323,7 @@ public class GameLaborDayAdventure extends GameActivity {
         isWon = true;
         tvStoryText.setText("The mom gives you the baby, you are a parent now, congrats. You win.");
 
-        ivStory.setImageResource(R.drawable.im_take_baby);
+        ivStory.setImageResource(R.drawable.im_laborday_take_baby);
 
         setAllBtnsVisible();
         btn1.setText("Next");
@@ -348,7 +345,7 @@ public class GameLaborDayAdventure extends GameActivity {
         isWon = false;
         tvStoryText.setText("The baby cries, your team loses from distraction. Game over.");
 
-        ivStory.setImageResource(R.drawable.im_baby_lose_game);
+        ivStory.setImageResource(R.drawable.im_laborday_baby_lose_game);
 
 
         setAllBtnsVisible();
@@ -373,7 +370,7 @@ public class GameLaborDayAdventure extends GameActivity {
         isWon = false;
         tvStoryText.setText("Bad idea, its raining now. You can't play soccer. Game over.");
 
-        ivStory.setImageResource(R.drawable.im_rain);
+        ivStory.setImageResource(R.drawable.im_laborday_rain);
 
         setAllBtnsVisible();
         btn1.setText("Next");
@@ -398,7 +395,7 @@ public class GameLaborDayAdventure extends GameActivity {
         {
             isWon = true;
             tvStoryText.setText("You go to the restaurant. The food is very good. But you forgot your wallet. They totally understand, free meal, you win.");
-            ivStory.setImageResource(R.drawable.im_free_meal);
+            ivStory.setImageResource(R.drawable.im_laborday_free_meal);
 
 
         }
@@ -406,7 +403,7 @@ public class GameLaborDayAdventure extends GameActivity {
         {
             isWon = false;
             tvStoryText.setText("You go to the restaurant. The food is aweful, you wasted your time and hard earned money\nGame over.");
-            ivStory.setImageResource(R.drawable.im_bad_food);
+            ivStory.setImageResource(R.drawable.im_laborday_bad_food);
         }
 
         setAllBtnsVisible();
@@ -429,7 +426,7 @@ public class GameLaborDayAdventure extends GameActivity {
         {
             tvStoryText.setText("Its a labor day miracle! You get to live the whole day over again!");
 
-            ivStory.setImageResource(R.drawable.im_miracle);
+            ivStory.setImageResource(R.drawable.im_laborday_miracle);
         }
         else
         {
@@ -453,7 +450,7 @@ public class GameLaborDayAdventure extends GameActivity {
             tvStoryText.setText("High school is over. Permenant Game over.");
             btn1.setText("Back to menu");
 
-            ivStory.setImageResource(R.drawable.im_high_school_over);
+            ivStory.setImageResource(R.drawable.im_laborday_high_school_over);
 
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -68,7 +68,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
         app:layout_constraintTop_toTopOf="@+id/guideline14"
-        tools:srcCompat="@drawable/im_hot_dog_1" />
+        tools:srcCompat="@drawable/im_hotdog_1" />
 
     <TextView
         android:id="@+id/tv_name_prompt"
@@ -193,7 +193,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline17"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
         app:layout_constraintTop_toTopOf="@+id/guideline15"
-        app:srcCompat="@drawable/im_hot_dog" />
+        app:srcCompat="@drawable/im_hotdog_0" />
 
     <ImageButton
         android:id="@+id/btn_soda"
@@ -204,7 +204,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintStart_toStartOf="@+id/guideline17"
         app:layout_constraintTop_toTopOf="@+id/guideline15"
-        app:srcCompat="@drawable/im_soda" />
+        app:srcCompat="@drawable/im_hotdog_soda" />
 
     <TextView
         android:id="@+id/textView4"
