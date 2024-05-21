@@ -1,7 +1,6 @@
 package com.poly.polyapcsafinalproject23_24;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -10,30 +9,40 @@ import android.widget.TextView;
 public class GameLaborDayAdventure extends GameActivity {
 
 
-    private TextView tvStoryTitle, tvOptionTitle, tvStoryText;
+    private TextView tvTitle, tvSubtitle, tvStoryText;
     private ImageView ivStory;
     private Button btn1, btn2, btn3, btn4;
     private boolean isWon;
     private int numLives;
 
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_labor_day);
+    @Override
+    protected void run() {
+        setContentView(R.layout.activity_game_4_button);
 
-        tvStoryTitle = findViewById(R.id.tv_title1);
-        tvOptionTitle = findViewById(R.id.tv_title2);
+        tvTitle = findViewById(R.id.tv_title_txt);
+        tvSubtitle = findViewById(R.id.tv_subtitle);
         tvStoryText = findViewById(R.id.tv_story);
         ivStory = findViewById(R.id.iv_story);
-        btn1 = findViewById(R.id.btn_option1);
-        btn2 = findViewById(R.id.btn_option2);
-        btn3 = findViewById(R.id.btn_option3);
-        btn4 = findViewById(R.id.btn_option4);
+        btn1 = findViewById(R.id.btn_1);
+        btn2 = findViewById(R.id.btn_2);
+        btn3 = findViewById(R.id.btn_3);
+        btn4 = findViewById(R.id.btn_4);
+
+        tvTitle.setText("LABOR DAY");
+        tvSubtitle.setText("High School Edition");
 
         numLives = 4;
         start();
     }
 
 
+    private void setAllBtnsVisible()
+    {
+        btn1.setVisibility(View.VISIBLE);
+        btn2.setVisibility(View.VISIBLE);
+        btn3.setVisibility(View.VISIBLE);
+        btn4.setVisibility(View.VISIBLE);
+    }
 
 
     public void start()
@@ -41,9 +50,7 @@ public class GameLaborDayAdventure extends GameActivity {
         isWon = false;
 
         ivStory.setImageResource(R.drawable.im_laborday_title);
-
-
-        tvOptionTitle.setText("HIGH SCHOOL EDITION");
+        playAudio(R.raw.audio_laborday_bass);
 
         tvStoryText.setText("Its labor day, lets go! Mom knows its the most important day of the year for a a high schooler, so she loaded up the car with a full tank of gas and gave you the keys. The world is your oyster. Where would you like to go?");
 
@@ -77,21 +84,13 @@ public class GameLaborDayAdventure extends GameActivity {
     }
 
 
-    private void setAllBtnsVisible()
-    {
-        playAudio(R.raw.audio_bass);
-        btn1.setVisibility(View.VISIBLE);
-        btn2.setVisibility(View.VISIBLE);
-        btn3.setVisibility(View.VISIBLE);
-        btn4.setVisibility(View.VISIBLE);
-    }
 
     //________BEACH PATH________
     private void goToBeach()
     {
-        tvStoryText.setText("What would you like to do at the beach?");
-
         ivStory.setImageResource(R.drawable.im_laborday_beach);
+
+        tvStoryText.setText("What would you like to do at the beach?");
 
         setAllBtnsVisible();
         btn1.setText("Go Swimming");
