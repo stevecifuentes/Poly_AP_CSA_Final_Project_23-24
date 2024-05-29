@@ -4,6 +4,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.poly.polyapcsafinalproject23_24.GameActivity;
+import com.poly.polyapcsafinalproject23_24.R;
 
 import java.util.Scanner;
 
@@ -34,68 +35,88 @@ import java.util.Scanner;
             start();
         }
 
+
         private void setAllBtnsVisible()
         {
             btn1.setVisibility(View.VISIBLE);
             btn2.setVisibility(View.VISIBLE);
             btn3.setVisibility(View.VISIBLE);
         }
-    }
 
 
-    private void start()
-    {
-
-
-        System.out.println("WINTER BREAK");
-
-        System.out.println("\nIts winter break, lets go!");
-        System.out.println("\nWhat would you like to do?");
-        System.out.println("1. Go outside\n2. Play video games\n3. Travel somewhere");
-
-        if (choice == 1)
+        private void start()
         {
-            goOutside();
+            isWon = false;
+
+            ivStory.setImagesResource(R.drawable.im_winterbreak_title);
+            playAudio(R.raw.audio_winterbreak_bass);
+
+            tvStoryText.setText("Its winter break, lets go! Now we are able to do fun stuff, What would you like to do?");
+
+            setAllBtnsVisible();
+            btn1.setText("Go outside");
+            btn2.setText("Play video games");
+            btn3.setText("Travel somewhere");
+
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v){goOutside();}
+            });
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v){videoGames();}
+            });
+            btn3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v){travelSomewhere();}
+            });
+
         }
-        else if (choice == 2)
-        {
-            videoGames();
-        }
-        else if (choice == 3)
-        {
-            travelSomewhere();
-        }
-    }
 
     //_________GOING OUTSIDE PATH__________
     private void goOutside()
     {
-        System.out.println("What would you like to do outside?");
-        System.out.println("1. Play a sport\n2. Hang out with friends");
+        ivStory.setImageResource(R.drawable.im_winterbreak_outside);
 
-        if (choice == 1)
-        {
-            playSport();
-        }
-        else if (choice == 2)
-        {
-            hangOut();
-        }
+        tvStoryText.setText("What would you like to do outside?");
+
+        setAllBtnsVisible();
+        btn1.setText("Play a sport");
+        btn2.setText("Hang out with friends");
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){playSport();}
+        });
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){hangOut();}
+        });
+
+
     }
 
     private void hangOut()
     {
-        System.out.println("\nYou guys decide to do something fun, what would it be?");
-        System.out.println("1. Prank someone\n2. Go home");
+        tvStoryText.setText("You guys decide to do something fun, what would it be?");
 
-        if (choice == 1)
-        {
-            prankSomeone();
-        }
-        else if (choice == 2)
-        {
-            goHome();
-        }
+        ivStory.setImageResource(R.drawable.im_winterbreak_hangout);
+
+        setAllBtnsVisible();
+        btn1.setText("Prank someone");
+        btn2.setText("Go home");
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {prankSomeone();}
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {goHome();}
+        });
+
     }
 
     private void prankSomeone()
@@ -360,7 +381,7 @@ import java.util.Scanner;
         {
             exploreWith();
         }
-    }
+
 
     private void exploreWith()
     {
