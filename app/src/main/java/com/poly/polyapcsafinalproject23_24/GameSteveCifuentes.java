@@ -51,7 +51,7 @@ import java.util.Scanner;
         {
             isWon = false;
 
-            ivStory.setImagesResource(R.drawable.im_winterbreak_title);
+            ivStory.setImagesResource(R.drawable.im_cifuentessteve_winterbreak);
             playAudio(R.raw.audio_winterbreak_bass);
 
             tvStoryText.setText("Its winter break, lets go! Now we are able to do fun stuff, What would you like to do?");
@@ -80,7 +80,7 @@ import java.util.Scanner;
     //_________GOING OUTSIDE PATH__________
     private void goOutside()
     {
-        ivStory.setImageResource(R.drawable.im_winterbreak_outside);
+        ivStory.setImageResource(R.drawable.im_cifuentessteve_outside);
 
         tvStoryText.setText("What would you like to do outside?");
 
@@ -104,7 +104,7 @@ import java.util.Scanner;
     {
         tvStoryText.setText("You guys decide to do something fun, what would it be?");
 
-        ivStory.setImageResource(R.drawable.im_winterbreak_hangout);
+        ivStory.setImageResource(R.drawable.im_cifuentessteve_hangout);
 
         setAllBtnsVisible();
         btn1.setText("Prank someone");
@@ -362,80 +362,74 @@ import java.util.Scanner;
         }
 
 
-
-    private void rGame()
-    {
-        System.out.println("\nYour mom walks in and sees what youre playing, Lose");
-        defeat();
-    }
-
-    private void pgGame()
-    {
-        System.out.println("You decide to play this PG13 game, what happens next?");
-        System.out.println("1. Got boring\n2. Decide to eat while playing");
-
-        if (choice == 1)
-        {
-            gotBoring();
-        }
-        else if (choice == 2)
-        {
-            eatPlay();
-        }
-    }
-
-        private void playSoccer()
+        private void rGame()
         {
 
-            tvStoryText.setText("You see a baby, what do you do?");
+            tvStoryText.setText("Your mom walks in and sees what youre playing. Game over.");
 
-            ivStory.setImageResource(R.drawable.im_laborday_soccer_baby);
+            ivStory.setImageResource(R.drawable.im_laborday_punch_shark);
 
             setAllBtnsVisible();
-            btn1.setText("Call the mom");
-            btn2.setText("Don't call the mom");
-            btn3.setVisibility(View.INVISIBLE);
-            btn4.setVisibility(View.INVISIBLE);
+            btn1.setText("Next");
 
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    callMom();
+                    end();
+                }
+            });
+        }
+
+
+        private void pgGame()
+        {
+
+            tvStoryText.setText("You decide to play this PG13 game, what happens next?");
+
+            ivStory.setImageResource(R.drawable.im_laborday_soccer_baby);
+
+            setAllBtnsVisible();
+            btn1.setText("Got boring");
+            btn2.setText("Decide to eat while playing");
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    gotBoring();
                 }
             });
 
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    dontCallMom();
+                    eatPlay();
                 }
             });
         }
 
 
-
-    private void gotBoring()
-    {
-        System.out.println("\nYou get off the game and go outside for the first time in 10 years, Win");
-        start();
-    }
-
-    private void eatPlay()
-    {
-        System.out.println("You decide to eat while you game, what happens next?");
-        System.out.println("1. You drop all your food\n2. Eat at table");
-
-        if (choice == 1)
+        private void gotBoring()
         {
-            dropFood();
-        }
-        else if (choice == 2)
-        {
-            atTable();
-        }
-    }
 
-        private void playSoccer()
+            isWon = true;
+            tvStoryText.setText("You get off the game and go outside for the first time in 10 years, congrats.");
+
+            ivStory.setImageResource(R.drawable.im_laborday_lifeguard_shark);
+
+            setAllBtnsVisible();
+            btn1.setText("Next");
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    end();
+                }
+            });
+
+        }
+
+
+        private void eatPlay()
         {
 
             tvStoryText.setText("You decide to eat while you game, what happens next?");
@@ -443,366 +437,633 @@ import java.util.Scanner;
             ivStory.setImageResource(R.drawable.im_laborday_soccer_baby);
 
             setAllBtnsVisible();
-            btn1.setText("Call the mom");
-            btn2.setText("Don't call the mom");
-            btn3.setVisibility(View.INVISIBLE);
-            btn4.setVisibility(View.INVISIBLE);
+            btn1.setText("You drop all your food");
+            btn2.setText("Eat at table");
 
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    callMom();
+                    dropFood();
                 }
             });
 
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    dontCallMom();
+                    atTable();
                 }
             });
         }
 
-    private void dropFood()
-    {
-        System.out.println("\nYou dropped all your food onto your pc and it explodes leaving a large hole in the earth, Lose");
-        defeat();
-    }
 
-    private void atTable()
-    {
-        System.out.println("\nAvoided a catastrophic event that could affect the world, Win");
-        start();
-    }
-
-    private void downloadGame()
-    {
-        System.out.println("Where would you like to download new game?");
-        System.out.println("1. Click on site favourite youtuber recommends\n2. Go on steam");
-
-        if (choice == 1)
+        private void dropFood()
         {
-            clickSite();
+
+            tvStoryText.setText("You dropped all your food onto your pc and it explodes leaving a large hole in the earth, Game over.");
+
+            ivStory.setImageResource(R.drawable.im_laborday_punch_shark);
+
+            setAllBtnsVisible();
+            btn1.setText("Next");
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    end();
+                }
+            });
         }
-        else if (choice == 2)
+
+
+        private void atTable()
         {
-            goSteam();
+
+            isWon = true;
+            tvStoryText.setText("Avoided a catastrophic event that could affect the world, congrats.");
+
+            ivStory.setImageResource(R.drawable.im_laborday_lifeguard_shark);
+
+            setAllBtnsVisible();
+            btn1.setText("Next");
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    end();
+                }
+            });
+
         }
-    }
 
-        private void playSoccer()
+
+        private void downloadGame()
         {
 
-            tvStoryText.setText("You see a baby, what do you do?");
+            tvStoryText.setText("Where would you like to download new game?");
 
             ivStory.setImageResource(R.drawable.im_laborday_soccer_baby);
 
             setAllBtnsVisible();
-            btn1.setText("Call the mom");
-            btn2.setText("Don't call the mom");
-            btn3.setVisibility(View.INVISIBLE);
-            btn4.setVisibility(View.INVISIBLE);
+            btn1.setText("Click on site favourite youtuber recommends");
+            btn2.setText("Go on steam");
 
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    callMom();
+                    clickSite();
                 }
             });
 
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    dontCallMom();
+                    goSteam();
                 }
             });
         }
 
-    private void goSteam()
-    {
-        System.out.println("\nYou decide to just download a game on steam which is safer and you avoided world ending event, Win");
-        start();
-    }
 
-    private void clickSite()
-    {
-        System.out.println("You get to the site, what happens next?");
-        System.out.println("1. Click on Advertisment\n2. Dont trust this site");
-
-        if (choice == 1)
+        private void goSteam()
         {
-            catchesAttention();
+
+            isWon = true;
+            tvStoryText.setText("You decide to just download a game on steam which is safer and you avoided world ending event, congrats.");
+
+            ivStory.setImageResource(R.drawable.im_laborday_lifeguard_shark);
+
+            setAllBtnsVisible();
+            btn1.setText("Next");
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    end();
+                }
+            });
+
         }
-        else if (choice == 2)
-        {
-            dontTrust();
-        }
-    }
 
-        private void playSoccer()
+
+        private void clickSite()
         {
 
-            tvStoryText.setText("You see a baby, what do you do?");
+            tvStoryText.setText("You get to the site, what happens next?");
 
             ivStory.setImageResource(R.drawable.im_laborday_soccer_baby);
 
             setAllBtnsVisible();
-            btn1.setText("Call the mom");
-            btn2.setText("Don't call the mom");
-            btn3.setVisibility(View.INVISIBLE);
-            btn4.setVisibility(View.INVISIBLE);
+            btn1.setText("Click on Advertisment");
+            btn2.setText("Dont trust this site");
 
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    callMom();
+                    catchesAttention();
                 }
             });
 
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    dontCallMom();
+                    dontTrust();
                 }
             });
         }
 
-    private void dontTrust()
-    {
-        System.out.println("\nYou decided it was best not to trust this site, Win");
-        start();
-    }
 
-    private void catchesAttention()
-    {
-        System.out.println("\nYou decide to download the game and it gave your pc a virus. Which causes the pc to blow up the whole neighborhood, Lose");
-        defeat();
-    }
+        private void dontTrust()
+        {
+
+            isWon = true;
+            tvStoryText.setText("You decided it was best not to trust this site, congrats.");
+
+            ivStory.setImageResource(R.drawable.im_laborday_lifeguard_shark);
+
+            setAllBtnsVisible();
+            btn1.setText("Next");
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    end();
+                }
+            });
+
+        }
+
+
+        private void catchesAttention()
+        {
+
+            tvStoryText.setText("You decide to download the game and it gave your pc a virus. Which causes the pc to blow up the whole neighborhood, Game over.");
+
+            ivStory.setImageResource(R.drawable.im_laborday_punch_shark);
+
+            setAllBtnsVisible();
+            btn1.setText("Next");
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    end();
+                }
+            });
+        }
 
     //______TRAVEL SOMEWHERE PATH______
-    private void travelSomewhere()
-    {
-        System.out.println("You get bored at your vacation area, what would you like to do?");
-        System.out.println("1. Tell your parents your going out\n2. Go see landmarks");
+        private void travelSomewhere()
+        {
 
-        if (choice == 1)
-        {
-            tellParents();
-        }
-        else if (choice == 2)
-        {
-            seeLandmarks();
-        }
-    }
+            tvStoryText.setText("You get bored at your vacation area, what would you like to do?");
 
-    private void seeLandmarks()
-    {
-        System.out.println("You get to your destination, what will you do next?");
-        System.out.println("1. Go explore by yourself\n2. Make new friends");
+            ivStory.setImageResource(R.drawable.im_laborday_swimming);
 
-        if (choice == 1)
-        {
-            goExplore();
-        }
-        else if (choice == 2)
-        {
-            newFriends();
-        }
-    }
+            setAllBtnsVisible();
+            btn1.setText("Tell your parents your going out");
+            btn2.setText("Go see landmarks");
 
-    private void goExplore()
-    {
-        System.out.println("\nYou get lost and your parents leave you behind thinking you were in the car, Lose");
-        defeat();
-    }
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {tellParents();}
+            });
 
-    private void newFriends()
-        System.out.println("You guys want to do something fun, what happens next?");
-        System.out.println("1. Go to arcade\n2. Go explore with them");
-        if (choice == 1)
-        {
-            goArcade();
-        }
-        else if (choice == 2)
-        {
-            exploreWith();
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    seeLandmarks();
+                }
+            });
+
         }
 
 
-    private void exploreWith()
-    {
-        Util.clearConsole();
-        System.out.println("\nYou all eventually get lost and have to venture back to civilization, Lose");
-        Util.pauseConsole();
-        defeat();
-    }
-
-    private void goArcade()
-    {
-        Util.clearConsole();
-        System.out.println("You guys get to the arcade, what will you do?");
-        System.out.println("1. Play for fun\n2. Challenge them");
-        int choice = Util.enterInt(1,2);
-
-        if (choice == 1)
+        private void seeLandmarks()
         {
-            forFun();
+
+            tvStoryText.setText("You get to your destination, what will you do next?");
+
+            ivStory.setImageResource(R.drawable.im_laborday_swimming);
+
+            setAllBtnsVisible();
+            btn1.setText("Go explore by yourself");
+            btn2.setText("Make new friends");
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {goExplore();}
+            });
+
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    newFriends();
+                }
+            });
+
         }
-        else if (choice == 2)
+
+
+        private void goExplore()
         {
-            challengeThem();
+
+            tvStoryText.setText("You get lost and your parents leave you behind thinking you were in the car. Game over.");
+
+            ivStory.setImageResource(R.drawable.im_laborday_punch_shark);
+
+            setAllBtnsVisible();
+            btn1.setText("Next");
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    end();
+                }
+            });
         }
-    }
 
-    private void forFun()
-    {
-        Util.clearConsole();
-        System.out.println("\nYou decided it was best to just play for fun and not compete with anyone, Win");
-        Util.pauseConsole();
-        start();
-    }
 
-    private void challengeThem()
-    {
-        Util.clearConsole();
-        System.out.println("\nThey are all way better than you. You stand there realizing all those hours of gaming was a waste. You stood no chance. Embarrassing, Lose");
-        Util.pauseConsole();
-        defeat();
-    }
-
-    private void tellParents()
-    {
-        Util.clearConsole();
-        System.out.println("You let you parents know you are going out to explore, what will you do now?");
-        System.out.println("1. Venture into woods\n2. Go to city");
-        int choice = Util.enterInt(1,2);
-
-        if (choice == 1)
+        private void newFriends()
         {
-            ventureWoods();
+
+            tvStoryText.setText("You guys want to do something fun, what happens next?");
+
+            ivStory.setImageResource(R.drawable.im_laborday_swimming);
+
+            setAllBtnsVisible();
+            btn1.setText("Go to arcade");
+            btn2.setText("Go explore with them");
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {goArcade();}
+            });
+
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    exploreWith();
+                }
+            });
+
         }
-        else if (choice == 2)
+
+
+        private void exploreWith()
         {
-            goCity();
+
+            tvStoryText.setText("You all eventually get lost and have to venture back to civilization, Game over.");
+
+            ivStory.setImageResource(R.drawable.im_laborday_punch_shark);
+
+            setAllBtnsVisible();
+            btn1.setText("Next");
+
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    end();
+                }
+            });
         }
-    }
 
-    private void goCity()
-    {
-        Util.clearConsole();
-        System.out.println("You see a store, what would you like to do?");
-        System.out.println("1. Go in it\n2. Avoid it");
-        int choice = Util.enterInt(1,2);
 
-        if (choice == 1)
+        private void goArcade()
         {
-            goIn();
+
+            tvStoryText.setText("You guys get to the arcade, what will you do?");
+
+            ivStory.setImageResource(R.drawable.im_laborday_swimming);
+
+            setAllBtnsVisible();
+            btn1.setText("Play for fun");
+            btn2.setText("Challenge them");
+            btn3.setVisibility(View.INVISIBLE);
+            btn4.setVisibility(View.INVISIBLE);
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    forFun();
+                }
+            });
+
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    challengeThem();
+                }
+            });
+
         }
-        else if (choice == 2)
+
+        private void forFun()
         {
-            avoidIt();
+
+            isWon = true;
+            tvStoryText.setText("You decided it was best to just play for fun and not compete with anyone, congrats.");
+
+            ivStory.setImageResource(R.drawable.im_laborday_lifeguard_shark);
+
+            setAllBtnsVisible();
+            btn1.setText("Next");
+
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    end();
+                }
+            });
+
         }
-    }
 
-    private void goIn()
-    {
-        Util.clearConsole();
-        System.out.println("\nYou waste all your money on things you might never use, Lose");
-        Util.pauseConsole();
-        defeat();
-    }
 
-    private void avoidIt()
-    {
-        Util.clearConsole();
-        System.out.println("\nYou avoided spending all your money on things you might never use, Win");
-        Util.pauseConsole();
-        start();
-    }
-
-    private void ventureWoods()
-    {
-        Util.clearConsole();
-        System.out.println("You are in the woods, what will you do next?");
-        System.out.println("1. You hear an odd noise\n2. You see something interesting");
-        int choice = Util.enterInt(1,2);
-
-        if (choice == 1)
+        private void challengeThem()
         {
-            oddNoise();
+
+            tvStoryText.setText("They are all way better than you. You stand there realizing all those hours of gaming was a waste. You stood no chance. Embarrassing. Game over.");
+
+            ivStory.setImageResource(R.drawable.im_laborday_punch_shark);
+
+            setAllBtnsVisible();
+            btn1.setText("Next");
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    end();
+                }
+            });
         }
-        else if (choice == 2)
+
+
+        private void tellParents()
         {
-            somethingInteresting();
+
+            tvStoryText.setText("You let you parents know you are going out to explore, what will you do now?");
+
+            ivStory.setImageResource(R.drawable.im_laborday_swimming);
+
+            setAllBtnsVisible();
+            btn1.setText("Venture into woods");
+            btn2.setText("Go to city");
+            btn3.setVisibility(View.INVISIBLE);
+            btn4.setVisibility(View.INVISIBLE);
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {ventureWoods();}
+            });
+
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    goCity();
+                }
+            });
+
         }
-    }
 
-    private void somethingInteresting()
-    {
-        Util.clearConsole();
-        System.out.println("You go more near it but get a bad feeling about it, what will you do next?");
-        System.out.println("1. Keep going towards it\n2. Walk away from it");
-        int choice = Util.enterInt(1,2);
 
-        if (choice == 1)
+        private void goCity()
         {
-            keepGoing();
+
+            tvStoryText.setText("You see a store, what would you like to do?");
+
+            ivStory.setImageResource(R.drawable.im_laborday_swimming);
+
+            setAllBtnsVisible();
+            btn1.setText("Go in it");
+            btn2.setText("Avoid it");
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    goIn();
+                }
+            });
+
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    avoidIt();
+                }
+            });
+
         }
-        else if (choice == 2)
+
+
+        private void goIn()
         {
-            walkAway();
+
+            tvStoryText.setText("You waste all your money on things you might never use, Game over.");
+
+            ivStory.setImageResource(R.drawable.im_laborday_punch_shark);
+
+            setAllBtnsVisible();
+            btn1.setText("Next");
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    end();
+                }
+            });
         }
-    }
 
-    private void keepGoing()
-    {
-        Util.clearConsole();
-        System.out.println("\nTurns out it was the home of bigfoot and he was not happy seeing some random rummage thru his things, Lose");
-        Util.pauseConsole();
-        defeat();
-    }
 
-    private void walkAway()
-    {
-        Util.clearConsole();
-        System.out.println("\nYou avoided that eerie looking structure or whatever it was, Win");
-        Util.pauseConsole();
-        start();
-    }
-
-    private void oddNoise()
-    {
-        Util.clearConsole();
-        System.out.println("You go even more near that dreadful noise, what will you do next?");
-        System.out.println("1. Get closer to it\n2. GET OUT OF THERE");
-        int choice = Util.enterInt(1,2);
-
-        if (choice == 1)
+        private void avoidIt()
         {
-            getCloser();
+
+            isWon = true;
+            tvStoryText.setText("You avoided spending all your money on things you might never use, congrats.");
+
+            ivStory.setImageResource(R.drawable.im_laborday_lifeguard_shark);
+
+            setAllBtnsVisible();
+            btn1.setText("Next");
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    end();
+                }
+            });
+
         }
-        else if (choice == 2)
+
+
+        private void ventureWoods()
         {
-            outThere();
+
+            tvStoryText.setText("You are in the woods, what will you do next?");
+
+            ivStory.setImageResource(R.drawable.im_laborday_swimming);
+
+            setAllBtnsVisible();
+            btn1.setText("You hear an odd noise");
+            btn2.setText("You see something interesting");
+            btn3.setVisibility(View.INVISIBLE);
+            btn4.setVisibility(View.INVISIBLE);
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    oddNoise();
+                }
+            });
+
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    somethingInteresting();
+                }
+            });
+
         }
-    }
 
-    private void getCloser()
-    {
-        Util.clearConsole();
-        System.out.println("\nAs you got even closer to whatever it was. There was an odd feeling that you shoudln't be here. As you turn back it catches you..., Lose");
-        Util.pauseConsole();
-        defeat();
-    }
 
-    private void outThere()
-    {
-        Util.clearConsole();
-        System.out.println("\nAs you start to rethink your choice of going towards this noise, you turn back. It gave you that sense of ease once you got out of the woods and back home. Whatever it was you avoided it. Maybe, Win");
-        Util.pauseConsole();
-        start();
-    }
+        private void somethingInteresting()
+        {
 
+            tvStoryText.setText("You go more near it but get a bad feeling about it, what will you do next?");
+
+            ivStory.setImageResource(R.drawable.im_laborday_swimming);
+
+            setAllBtnsVisible();
+            btn1.setText("Keep going towards it");
+            btn2.setText("Walk away from it");
+            btn3.setVisibility(View.INVISIBLE);
+            btn4.setVisibility(View.INVISIBLE);
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    keepGoing();
+                }
+            });
+
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    walkAway();
+                }
+            });
+
+        }
+
+
+        private void keepGoing()
+        {
+
+            tvStoryText.setText("Turns out it was the home of bigfoot and he was not happy seeing some random rummage thru his things, Game over.");
+
+            ivStory.setImageResource(R.drawable.im_laborday_punch_shark);
+
+            setAllBtnsVisible();
+            btn1.setText("Next");
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    end();
+                }
+            });
+        }
+
+
+        private void walkAway()
+        {
+
+            isWon = true;
+            tvStoryText.setText("You avoided that eerie looking structure or whatever it was, congrats.");
+
+            ivStory.setImageResource(R.drawable.im_laborday_lifeguard_shark);
+
+            setAllBtnsVisible();
+            btn1.setText("Next");
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    end();
+                }
+            });
+
+        }
+
+
+        private void oddNoise()
+        {
+
+            tvStoryText.setText("You go even more near that dreadful noise, what will you do next?");
+
+            ivStory.setImageResource(R.drawable.im_laborday_swimming);
+
+            setAllBtnsVisible();
+            btn1.setText("Get closer to it");
+            btn2.setText("GET OUT OF THERE");
+            btn3.setVisibility(View.INVISIBLE);
+            btn4.setVisibility(View.INVISIBLE);
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    getCloser();
+                }
+            });
+
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    outThere();
+                }
+            });
+
+        }
+
+
+        private void getCloser()
+        {
+
+            tvStoryText.setText("As you got even closer to whatever it was. There was an odd feeling that you shoudln't be here. As you turn back you get this feeling of something watching you as it reaches for you... Game over.");
+
+            ivStory.setImageResource(R.drawable.im_laborday_punch_shark);
+
+            setAllBtnsVisible();
+            btn1.setText("Next");
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    end();
+                }
+            });
+        }
+
+        private void outThere()
+        {
+
+            isWon = true;
+            tvStoryText.setText("As you start to rethink your choice of going towards this noise, you turn back. It gave you that sense of ease once you got out of the woods and back home. Whatever it was you avoided it, Maybe. Win");
+
+            ivStory.setImageResource(R.drawable.im_laborday_lifeguard_shark);
+
+            setAllBtnsVisible();
+            btn1.setText("Next");
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    end();
+                }
+            });
+
+        }
+
+
+        //_______END CODE________
         private void end()
         {
             if (isWon)
