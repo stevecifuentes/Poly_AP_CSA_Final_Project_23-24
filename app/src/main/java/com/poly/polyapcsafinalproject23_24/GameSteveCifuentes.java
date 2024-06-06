@@ -126,7 +126,7 @@ import java.util.Scanner;
         {
             tvStoryText.setText("You guys decide to prank someone, what happens next?");
 
-            ivStory.setImageResource(R.drawable.im_winterbreak_pranksomeone);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_pranksomeone);
 
             setAllBtnsVisible();
             btn1.setText("You get caught");
@@ -150,7 +150,7 @@ import java.util.Scanner;
             isWon = true;
             tvStoryText.setText("You and your friends didnt get caught and escaped flawlessly, congrats");
 
-            ivStory.setImageResource(R.drawable.im_winterbreak_playoff);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_playoff);
 
             setAllBtnsVisible();
             btn1.setText("Next");
@@ -167,7 +167,7 @@ import java.util.Scanner;
 
             tvStoryText.setText("You guys get caught, what will you do?");
 
-            ivStory.setImageResource(R.drawable.im_laborday_getcaught);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_getcaught);
 
             setAllBtnsVisible();
             btn1.setText("Run away");
@@ -195,7 +195,7 @@ import java.util.Scanner;
             isWon = true;
             tvStoryText.setText("You decide to run away and leave your friends behind and now they dislike you. A win but at what cost");
 
-            ivStory.setImageResource(R.drawable.im_winterbreak_runaway);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_runaway);
 
             setAllBtnsVisible();
             btn1.setText("Next");
@@ -212,7 +212,7 @@ import java.util.Scanner;
 
             tvStoryText.setText("You wait for your friends and runaway with them but get caught, Game over.");
 
-            ivStory.setImageResource(R.drawable.im_winterbreak_staywait);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_staywait);
 
             setAllBtnsVisible();
             btn1.setText("Next");
@@ -231,7 +231,7 @@ import java.util.Scanner;
 
             tvStoryText.setText("You missed out on all the fun activities they had planned, Game over.");
 
-            ivStory.setImageResource(R.drawable.im_laborday_punch_shark);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_gohome);
 
             setAllBtnsVisible();
             btn1.setText("Next");
@@ -249,7 +249,7 @@ import java.util.Scanner;
 
             tvStoryText.setText("It starts to rain, what will you do?");
 
-            ivStory.setImageResource(R.drawable.im_laborday_playing_sport);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_sport);
 
             setAllBtnsVisible();
             btn1.setText("Stay a while longer");
@@ -276,7 +276,7 @@ import java.util.Scanner;
             isWon = true;
             tvStoryText.setText("It was too cold to be outside for any longer, congrats.");
 
-            ivStory.setImageResource(R.drawable.im_laborday_back_home);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_backhome);
 
             setAllBtnsVisible();
             btn1.setText("Next");
@@ -295,7 +295,7 @@ import java.util.Scanner;
 
             tvStoryText.setText("You freeze to death because of the rain and the cold winds, Game over.");
 
-            ivStory.setImageResource(R.drawable.im_laborday_staylonger);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_staylonger);
 
             setAllBtnsVisible();
             btn1.setText("Next");
@@ -312,9 +312,9 @@ import java.util.Scanner;
         private void videoGames()
         {
 
-            tvStoryText.setText("What would you like to do?");
+            tvStoryText.setText("Where would you like to play a video game in?");
 
-            ivStory.setImageResource(R.drawable.im_laborday_videogames);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_videogames);
 
             setAllBtnsVisible();
             btn1.setText("Choose an owned games");
@@ -340,7 +340,7 @@ import java.util.Scanner;
 
             tvStoryText.setText("What already owned game would you like to play?");
 
-            ivStory.setImageResource(R.drawable.im_winterbreak_choosegames);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_choosegame);
 
             setAllBtnsVisible();
             btn1.setText("PG game");
@@ -367,7 +367,7 @@ import java.util.Scanner;
 
             tvStoryText.setText("Your mom walks in and sees what youre playing. Game over.");
 
-            ivStory.setImageResource(R.drawable.im_laborday_punch_shark);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_rgame);
 
             setAllBtnsVisible();
             btn1.setText("Next");
@@ -386,7 +386,7 @@ import java.util.Scanner;
 
             tvStoryText.setText("You decide to play this PG13 game, what happens next?");
 
-            ivStory.setImageResource(R.drawable.im_laborday_soccer_baby);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_pggame);
 
             setAllBtnsVisible();
             btn1.setText("Got boring");
@@ -414,7 +414,7 @@ import java.util.Scanner;
             isWon = true;
             tvStoryText.setText("You get off the game and go outside for the first time in 10 years, congrats.");
 
-            ivStory.setImageResource(R.drawable.im_laborday_lifeguard_shark);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_gotboring);
 
             setAllBtnsVisible();
             btn1.setText("Next");
@@ -434,7 +434,7 @@ import java.util.Scanner;
 
             tvStoryText.setText("You decide to eat while you game, what happens next?");
 
-            ivStory.setImageResource(R.drawable.im_laborday_soccer_baby);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_eatplay);
 
             setAllBtnsVisible();
             btn1.setText("You drop all your food");
@@ -461,7 +461,7 @@ import java.util.Scanner;
 
             tvStoryText.setText("You dropped all your food onto your pc and it explodes leaving a large hole in the earth, Game over.");
 
-            ivStory.setImageResource(R.drawable.im_laborday_punch_shark);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_dropfood);
 
             setAllBtnsVisible();
             btn1.setText("Next");
@@ -481,7 +481,7 @@ import java.util.Scanner;
             isWon = true;
             tvStoryText.setText("Avoided a catastrophic event that could affect the world, congrats.");
 
-            ivStory.setImageResource(R.drawable.im_laborday_lifeguard_shark);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_attable);
 
             setAllBtnsVisible();
             btn1.setText("Next");
@@ -501,7 +501,7 @@ import java.util.Scanner;
 
             tvStoryText.setText("Where would you like to download new game?");
 
-            ivStory.setImageResource(R.drawable.im_laborday_soccer_baby);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_game);
 
             setAllBtnsVisible();
             btn1.setText("Click on site favourite youtuber recommends");
@@ -529,7 +529,7 @@ import java.util.Scanner;
             isWon = true;
             tvStoryText.setText("You decide to just download a game on steam which is safer and you avoided world ending event, congrats.");
 
-            ivStory.setImageResource(R.drawable.im_laborday_lifeguard_shark);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_downloadgame);
 
             setAllBtnsVisible();
             btn1.setText("Next");
