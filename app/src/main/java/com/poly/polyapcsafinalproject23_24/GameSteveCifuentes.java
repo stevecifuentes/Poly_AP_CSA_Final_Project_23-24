@@ -1,3 +1,5 @@
+package com.poly.polyapcsafinalproject23_24;
+
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
@@ -11,9 +13,10 @@ import com.poly.polyapcsafinalproject23_24.R;
 
 import java.util.Scanner;
 
-    public class GameWinterBreakAdventure extends GameActivity {
+    public class GameSteveCifuentes extends GameActivity {
 
         private TextView tvTitle, tvSubtitle, tvStoryText;
+
         private ImageView ivStory;
         private Button btn1, btn2, btn3;
         private boolean isWon;
@@ -39,20 +42,17 @@ import java.util.Scanner;
         }
 
 
-        private void setAllBtnsVisible()
-        {
+        private void setAllBtnsVisible() {
             btn1.setVisibility(View.VISIBLE);
             btn2.setVisibility(View.VISIBLE);
             btn3.setVisibility(View.VISIBLE);
         }
 
 
-        private void start()
-        {
+        private void start() {
             isWon = false;
 
-            ivStory.setImagesResource(R.drawable.im_cifuentessteve_winterbreak);
-            playAudio(R.raw.audio_winterbreak_bass);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_winterbreak);
 
             tvStoryText.setText("Its winter break, lets go! Now we are able to do fun stuff, What would you like to do?");
 
@@ -64,66 +64,77 @@ import java.util.Scanner;
 
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v){goOutside();}
+                public void onClick(View v) {
+                    goOutside();
+                }
             });
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v){videoGames();}
+                public void onClick(View v) {
+                    videoGames();
+                }
             });
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v){travelSomewhere();}
+                public void onClick(View v) {
+                    travelSomewhere();
+                }
             });
 
         }
 
-    //_________GOING OUTSIDE PATH__________
-    private void goOutside()
-    {
-        ivStory.setImageResource(R.drawable.im_cifuentessteve_outside);
+        //_________GOING OUTSIDE PATH__________
+        private void goOutside() {
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_outside);
 
-        tvStoryText.setText("What would you like to do outside?");
+            tvStoryText.setText("What would you like to do outside?");
 
-        setAllBtnsVisible();
-        btn1.setText("Play a sport");
-        btn2.setText("Hang out with friends");
+            setAllBtnsVisible();
+            btn1.setText("Play a sport");
+            btn2.setText("Hang out with friends");
 
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){playSport();}
-        });
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){hangOut();}
-        });
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    playSport();
+                }
+            });
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    hangOut();
+                }
+            });
 
 
-    }
+        }
 
-    private void hangOut()
-    {
-        tvStoryText.setText("You guys decide to do something fun, what would it be?");
+        private void hangOut() {
+            tvStoryText.setText("You guys decide to do something fun, what would it be?");
 
-        ivStory.setImageResource(R.drawable.im_cifuentessteve_hangout);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_hangout);
 
-        setAllBtnsVisible();
-        btn1.setText("Prank someone");
-        btn2.setText("Go home");
+            setAllBtnsVisible();
+            btn1.setText("Prank someone");
+            btn2.setText("Go home");
 
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {prankSomeone();}
-        });
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    prankSomeone();
+                }
+            });
 
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {goHome();}
-        });
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    goHome();
+                }
+            });
 
-    }
+        }
 
-        private void prankSomeone()
-        {
+        private void prankSomeone() {
             tvStoryText.setText("You guys decide to prank someone, what happens next?");
 
             ivStory.setImageResource(R.drawable.im_cifuentessteve_pranksomeone);
@@ -134,18 +145,21 @@ import java.util.Scanner;
 
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {getCaught();}
+                public void onClick(View v) {
+                    getCaught();
+                }
             });
 
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {playOff();}
+                public void onClick(View v) {
+                    playOff();
+                }
             });
 
         }
 
-        private void playOff()
-        {
+        private void playOff() {
 
             isWon = true;
             tvStoryText.setText("You and your friends didnt get caught and escaped flawlessly, congrats");
@@ -157,13 +171,14 @@ import java.util.Scanner;
 
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {end();}
+                public void onClick(View v) {
+                    end();
+                }
             });
 
         }
 
-        private void getCaught()
-        {
+        private void getCaught() {
 
             tvStoryText.setText("You guys get caught, what will you do?");
 
@@ -189,8 +204,7 @@ import java.util.Scanner;
 
         }
 
-        private void runAway()
-        {
+        private void runAway() {
 
             isWon = true;
             tvStoryText.setText("You decide to run away and leave your friends behind and now they dislike you. A win but at what cost");
@@ -202,13 +216,14 @@ import java.util.Scanner;
 
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {end();}
+                public void onClick(View v) {
+                    end();
+                }
             });
 
         }
 
-        private void stayWait()
-        {
+        private void stayWait() {
 
             tvStoryText.setText("You wait for your friends and runaway with them but get caught, Game over.");
 
@@ -226,8 +241,7 @@ import java.util.Scanner;
         }
 
 
-        private void goHome()
-        {
+        private void goHome() {
 
             tvStoryText.setText("You missed out on all the fun activities they had planned, Game over.");
 
@@ -244,8 +258,7 @@ import java.util.Scanner;
             });
         }
 
-        private void playSport()
-        {
+        private void playSport() {
 
             tvStoryText.setText("It starts to rain, what will you do?");
 
@@ -270,8 +283,7 @@ import java.util.Scanner;
             });
         }
 
-        private void backHome()
-        {
+        private void backHome() {
 
             isWon = true;
             tvStoryText.setText("It was too cold to be outside for any longer, congrats.");
@@ -290,8 +302,7 @@ import java.util.Scanner;
 
         }
 
-        private void stayLonger()
-        {
+        private void stayLonger() {
 
             tvStoryText.setText("You freeze to death because of the rain and the cold winds, Game over.");
 
@@ -308,9 +319,8 @@ import java.util.Scanner;
             });
         }
 
-    //________VIDEO GAMES PATH________
-        private void videoGames()
-        {
+        //________VIDEO GAMES PATH________
+        private void videoGames() {
 
             tvStoryText.setText("Where would you like to play a video game in?");
 
@@ -335,8 +345,7 @@ import java.util.Scanner;
             });
         }
 
-        private void chooseGame()
-        {
+        private void chooseGame() {
 
             tvStoryText.setText("What already owned game would you like to play?");
 
@@ -362,8 +371,7 @@ import java.util.Scanner;
         }
 
 
-        private void rGame()
-        {
+        private void rGame() {
 
             tvStoryText.setText("Your mom walks in and sees what youre playing. Game over.");
 
@@ -381,8 +389,7 @@ import java.util.Scanner;
         }
 
 
-        private void pgGame()
-        {
+        private void pgGame() {
 
             tvStoryText.setText("You decide to play this PG13 game, what happens next?");
 
@@ -408,8 +415,7 @@ import java.util.Scanner;
         }
 
 
-        private void gotBoring()
-        {
+        private void gotBoring() {
 
             isWon = true;
             tvStoryText.setText("You get off the game and go outside for the first time in 10 years, congrats.");
@@ -429,8 +435,7 @@ import java.util.Scanner;
         }
 
 
-        private void eatPlay()
-        {
+        private void eatPlay() {
 
             tvStoryText.setText("You decide to eat while you game, what happens next?");
 
@@ -456,8 +461,7 @@ import java.util.Scanner;
         }
 
 
-        private void dropFood()
-        {
+        private void dropFood() {
 
             tvStoryText.setText("You dropped all your food onto your pc and it explodes leaving a large hole in the earth, Game over.");
 
@@ -475,8 +479,7 @@ import java.util.Scanner;
         }
 
 
-        private void atTable()
-        {
+        private void atTable() {
 
             isWon = true;
             tvStoryText.setText("Avoided a catastrophic event that could affect the world, congrats.");
@@ -496,8 +499,7 @@ import java.util.Scanner;
         }
 
 
-        private void downloadGame()
-        {
+        private void downloadGame() {
 
             tvStoryText.setText("Where would you like to download new game?");
 
@@ -523,8 +525,7 @@ import java.util.Scanner;
         }
 
 
-        private void goSteam()
-        {
+        private void goSteam() {
 
             isWon = true;
             tvStoryText.setText("You decide to just download a game on steam which is safer and you avoided world ending event, congrats.");
@@ -544,12 +545,11 @@ import java.util.Scanner;
         }
 
 
-        private void clickSite()
-        {
+        private void clickSite() {
 
             tvStoryText.setText("You get to the site, what happens next?");
 
-            ivStory.setImageResource(R.drawable.im_laborday_soccer_baby);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_clicksite);
 
             setAllBtnsVisible();
             btn1.setText("Click on Advertisment");
@@ -571,13 +571,12 @@ import java.util.Scanner;
         }
 
 
-        private void dontTrust()
-        {
+        private void dontTrust() {
 
             isWon = true;
             tvStoryText.setText("You decided it was best not to trust this site, congrats.");
 
-            ivStory.setImageResource(R.drawable.im_laborday_lifeguard_shark);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_donttrust);
 
             setAllBtnsVisible();
             btn1.setText("Next");
@@ -592,12 +591,11 @@ import java.util.Scanner;
         }
 
 
-        private void catchesAttention()
-        {
+        private void catchesAttention() {
 
             tvStoryText.setText("You decide to download the game and it gave your pc a virus. Which causes the pc to blow up the whole neighborhood, Game over.");
 
-            ivStory.setImageResource(R.drawable.im_laborday_punch_shark);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_catchesattention);
 
             setAllBtnsVisible();
             btn1.setText("Next");
@@ -610,13 +608,12 @@ import java.util.Scanner;
             });
         }
 
-    //______TRAVEL SOMEWHERE PATH______
-        private void travelSomewhere()
-        {
+        //______TRAVEL SOMEWHERE PATH______
+        private void travelSomewhere() {
 
-            tvStoryText.setText("You get bored at your vacation area, what would you like to do?");
+            tvStoryText.setText("You get bored at your vacation home, what would you like to do?");
 
-            ivStory.setImageResource(R.drawable.im_laborday_swimming);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_travelsomewhere);
 
             setAllBtnsVisible();
             btn1.setText("Tell your parents your going out");
@@ -624,7 +621,9 @@ import java.util.Scanner;
 
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {tellParents();}
+                public void onClick(View v) {
+                    tellParents();
+                }
             });
 
             btn2.setOnClickListener(new View.OnClickListener() {
@@ -637,12 +636,11 @@ import java.util.Scanner;
         }
 
 
-        private void seeLandmarks()
-        {
+        private void seeLandmarks() {
 
             tvStoryText.setText("You get to your destination, what will you do next?");
 
-            ivStory.setImageResource(R.drawable.im_laborday_swimming);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_seelandmarks);
 
             setAllBtnsVisible();
             btn1.setText("Go explore by yourself");
@@ -650,7 +648,9 @@ import java.util.Scanner;
 
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {goExplore();}
+                public void onClick(View v) {
+                    goExplore();
+                }
             });
 
             btn2.setOnClickListener(new View.OnClickListener() {
@@ -663,12 +663,11 @@ import java.util.Scanner;
         }
 
 
-        private void goExplore()
-        {
+        private void goExplore() {
 
             tvStoryText.setText("You get lost and your parents leave you behind thinking you were in the car. Game over.");
 
-            ivStory.setImageResource(R.drawable.im_laborday_punch_shark);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_goexplore);
 
             setAllBtnsVisible();
             btn1.setText("Next");
@@ -682,12 +681,11 @@ import java.util.Scanner;
         }
 
 
-        private void newFriends()
-        {
+        private void newFriends() {
 
             tvStoryText.setText("You guys want to do something fun, what happens next?");
 
-            ivStory.setImageResource(R.drawable.im_laborday_swimming);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_newfriends);
 
             setAllBtnsVisible();
             btn1.setText("Go to arcade");
@@ -695,7 +693,9 @@ import java.util.Scanner;
 
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {goArcade();}
+                public void onClick(View v) {
+                    goArcade();
+                }
             });
 
             btn2.setOnClickListener(new View.OnClickListener() {
@@ -708,12 +708,11 @@ import java.util.Scanner;
         }
 
 
-        private void exploreWith()
-        {
+        private void exploreWith() {
 
             tvStoryText.setText("You all eventually get lost and have to venture back to civilization, Game over.");
 
-            ivStory.setImageResource(R.drawable.im_laborday_punch_shark);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_explorewith);
 
             setAllBtnsVisible();
             btn1.setText("Next");
@@ -728,18 +727,15 @@ import java.util.Scanner;
         }
 
 
-        private void goArcade()
-        {
+        private void goArcade() {
 
             tvStoryText.setText("You guys get to the arcade, what will you do?");
 
-            ivStory.setImageResource(R.drawable.im_laborday_swimming);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_goarcade);
 
             setAllBtnsVisible();
             btn1.setText("Play for fun");
             btn2.setText("Challenge them");
-            btn3.setVisibility(View.INVISIBLE);
-            btn4.setVisibility(View.INVISIBLE);
 
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -757,13 +753,12 @@ import java.util.Scanner;
 
         }
 
-        private void forFun()
-        {
+        private void forFun() {
 
             isWon = true;
             tvStoryText.setText("You decided it was best to just play for fun and not compete with anyone, congrats.");
 
-            ivStory.setImageResource(R.drawable.im_laborday_lifeguard_shark);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_forfun);
 
             setAllBtnsVisible();
             btn1.setText("Next");
@@ -779,12 +774,11 @@ import java.util.Scanner;
         }
 
 
-        private void challengeThem()
-        {
+        private void challengeThem() {
 
             tvStoryText.setText("They are all way better than you. You stand there realizing all those hours of gaming was a waste. You stood no chance. Embarrassing. Game over.");
 
-            ivStory.setImageResource(R.drawable.im_laborday_punch_shark);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_challengethem);
 
             setAllBtnsVisible();
             btn1.setText("Next");
@@ -798,22 +792,21 @@ import java.util.Scanner;
         }
 
 
-        private void tellParents()
-        {
+        private void tellParents() {
 
             tvStoryText.setText("You let you parents know you are going out to explore, what will you do now?");
 
-            ivStory.setImageResource(R.drawable.im_laborday_swimming);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_tellparents);
 
             setAllBtnsVisible();
             btn1.setText("Venture into woods");
             btn2.setText("Go to city");
-            btn3.setVisibility(View.INVISIBLE);
-            btn4.setVisibility(View.INVISIBLE);
 
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {ventureWoods();}
+                public void onClick(View v) {
+                    ventureWoods();
+                }
             });
 
             btn2.setOnClickListener(new View.OnClickListener() {
@@ -826,12 +819,11 @@ import java.util.Scanner;
         }
 
 
-        private void goCity()
-        {
+        private void goCity() {
 
             tvStoryText.setText("You see a store, what would you like to do?");
 
-            ivStory.setImageResource(R.drawable.im_laborday_swimming);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_gocity);
 
             setAllBtnsVisible();
             btn1.setText("Go in it");
@@ -854,12 +846,11 @@ import java.util.Scanner;
         }
 
 
-        private void goIn()
-        {
+        private void goIn() {
 
             tvStoryText.setText("You waste all your money on things you might never use, Game over.");
 
-            ivStory.setImageResource(R.drawable.im_laborday_punch_shark);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_goin);
 
             setAllBtnsVisible();
             btn1.setText("Next");
@@ -873,13 +864,12 @@ import java.util.Scanner;
         }
 
 
-        private void avoidIt()
-        {
+        private void avoidIt() {
 
             isWon = true;
             tvStoryText.setText("You avoided spending all your money on things you might never use, congrats.");
 
-            ivStory.setImageResource(R.drawable.im_laborday_lifeguard_shark);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_avoidit);
 
             setAllBtnsVisible();
             btn1.setText("Next");
@@ -894,18 +884,15 @@ import java.util.Scanner;
         }
 
 
-        private void ventureWoods()
-        {
+        private void ventureWoods() {
 
             tvStoryText.setText("You are in the woods, what will you do next?");
 
-            ivStory.setImageResource(R.drawable.im_laborday_swimming);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_venturewoods);
 
             setAllBtnsVisible();
             btn1.setText("You hear an odd noise");
             btn2.setText("You see something interesting");
-            btn3.setVisibility(View.INVISIBLE);
-            btn4.setVisibility(View.INVISIBLE);
 
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -924,18 +911,15 @@ import java.util.Scanner;
         }
 
 
-        private void somethingInteresting()
-        {
+        private void somethingInteresting() {
 
             tvStoryText.setText("You go more near it but get a bad feeling about it, what will you do next?");
 
-            ivStory.setImageResource(R.drawable.im_laborday_swimming);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_something);
 
             setAllBtnsVisible();
             btn1.setText("Keep going towards it");
             btn2.setText("Walk away from it");
-            btn3.setVisibility(View.INVISIBLE);
-            btn4.setVisibility(View.INVISIBLE);
 
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -954,12 +938,11 @@ import java.util.Scanner;
         }
 
 
-        private void keepGoing()
-        {
+        private void keepGoing() {
 
             tvStoryText.setText("Turns out it was the home of bigfoot and he was not happy seeing some random rummage thru his things, Game over.");
 
-            ivStory.setImageResource(R.drawable.im_laborday_punch_shark);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_keepgoing);
 
             setAllBtnsVisible();
             btn1.setText("Next");
@@ -973,8 +956,7 @@ import java.util.Scanner;
         }
 
 
-        private void walkAway()
-        {
+        private void walkAway() {
 
             isWon = true;
             tvStoryText.setText("You avoided that eerie looking structure or whatever it was, congrats.");
@@ -994,18 +976,15 @@ import java.util.Scanner;
         }
 
 
-        private void oddNoise()
-        {
+        private void oddNoise() {
 
             tvStoryText.setText("You go even more near that dreadful noise, what will you do next?");
 
-            ivStory.setImageResource(R.drawable.im_laborday_swimming);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_oddnoise);
 
             setAllBtnsVisible();
             btn1.setText("Get closer to it");
             btn2.setText("GET OUT OF THERE");
-            btn3.setVisibility(View.INVISIBLE);
-            btn4.setVisibility(View.INVISIBLE);
 
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -1024,12 +1003,11 @@ import java.util.Scanner;
         }
 
 
-        private void getCloser()
-        {
+        private void getCloser() {
 
             tvStoryText.setText("As you got even closer to whatever it was. There was an odd feeling that you shoudln't be here. As you turn back you get this feeling of something watching you as it reaches for you... Game over.");
 
-            ivStory.setImageResource(R.drawable.im_laborday_punch_shark);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_getcloser);
 
             setAllBtnsVisible();
             btn1.setText("Next");
@@ -1042,13 +1020,12 @@ import java.util.Scanner;
             });
         }
 
-        private void outThere()
-        {
+        private void outThere() {
 
             isWon = true;
             tvStoryText.setText("As you start to rethink your choice of going towards this noise, you turn back. It gave you that sense of ease once you got out of the woods and back home. Whatever it was you avoided it, Maybe. Win");
 
-            ivStory.setImageResource(R.drawable.im_laborday_lifeguard_shark);
+            ivStory.setImageResource(R.drawable.im_cifuentessteve_outthere);
 
             setAllBtnsVisible();
             btn1.setText("Next");
@@ -1064,23 +1041,18 @@ import java.util.Scanner;
 
 
         //_______END CODE________
-        private void end()
-        {
-            if (isWon)
-            {
+        private void end() {
+            if (isWon) {
                 tvStoryText.setText("Its a Winter Break miracle, you get to relive every moment again");
 
-                ivStory.setImageResource(R.drawable.im_laborday_miracle);
-            }
-            else
-            {
+                ivStory.setImageResource(R.drawable.im_cifuentessteve_miracle);
+            } else {
                 numLives--;
                 String text = "You wasted your chance of having a nice break. You have " + numLives + " days remaining";
                 tvStoryText.setText(text);
             }
 
-            if (numLives > 0)
-            {
+            if (numLives > 0) {
                 btn1.setText("Play again!");
                 btn1.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -1088,19 +1060,18 @@ import java.util.Scanner;
                         start();
                     }
                 });
-            }
-            else
-            {
+            } else {
                 tvStoryText.setText("Winter Break is over. RIP");
                 btn1.setText("Back to menu");
 
-                ivStory.setImageResource(R.drawable.im_laborday_winter_break_over);
+                ivStory.setImageResource(R.drawable.im_cifuentessteve_breakover);
 
                 btn1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        startActivity(new Intent(GameWinterBreakAdventure.this, MainActivity.class));
+                        startActivity(new Intent(GameSteveCifuentes.this, MainActivity.class));
                     }
                 });
             }
         }
+    }
